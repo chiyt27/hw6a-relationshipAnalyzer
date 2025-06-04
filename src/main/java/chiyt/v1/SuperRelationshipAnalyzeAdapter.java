@@ -1,4 +1,4 @@
-package chiyt;
+package chiyt.v1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,7 +29,7 @@ public class SuperRelationshipAnalyzeAdapter implements RelationshipAnalyzer {
                 String person = parts[0].trim();
                 String[] friends = parts[1].trim().split(" ");
 
-                // 備一份關係
+                // 備份一份原始的關係
                 relationships.put(person, Arrays.asList(friends));
                 // 準備傳給 SuperRelationshipAnalyzer 的 script
                 for (String friend : friends) {
@@ -47,8 +47,8 @@ public class SuperRelationshipAnalyzeAdapter implements RelationshipAnalyzer {
 
         String superAnalyzerScript = result.toString();
         superAnalyzer.init(superAnalyzerScript);
-        // System.out.println("SuperAnalyzer Script:\n" + superAnalyzerScript);
     }
+
     @Override
     public List<String> getMutualFriends(String name1, String name2) {
         List<String> friends1 = relationships.get(name1);

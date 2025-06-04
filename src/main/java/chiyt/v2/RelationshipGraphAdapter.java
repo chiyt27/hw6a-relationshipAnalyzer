@@ -1,4 +1,4 @@
-package chiyt;
+package chiyt.v2;
 
 import java.util.Set;
 
@@ -14,7 +14,7 @@ public class RelationshipGraphAdapter implements RelationshipGraph {
         friendGraph = new SimpleGraph<>(DefaultEdge.class);
     }
 
-    public void parse(String script) {
+    public RelationshipGraph parse(String script) {
         String[] lines = script.split("\n");
         for (String line : lines) {
             String[] parts = line.split(":");
@@ -48,5 +48,4 @@ public class RelationshipGraphAdapter implements RelationshipGraph {
         // 檢查 name2 是否在這個 set 裡
         return connectedSet.contains(name2);
     }
-
 }
