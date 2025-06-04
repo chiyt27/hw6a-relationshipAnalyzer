@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class SuperRelationshipAnalyzeAdapter implements RelationshipAnalyzer {
+public class SuperRelationshipAdapter implements RelationshipAnalyzer {
     Map<String, List<String>> relationships;
     SuperRelationshipAnalyzer superAnalyzer;
 
-    public SuperRelationshipAnalyzeAdapter(SuperRelationshipAnalyzer analyzer) {
+    public SuperRelationshipAdapter(SuperRelationshipAnalyzer analyzer) {
         this.superAnalyzer = analyzer;
     }
 
