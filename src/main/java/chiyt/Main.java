@@ -27,8 +27,8 @@ public class Main
 
             //v2
             chiyt.v2.RelationshipAnalyzer graphAnalyzer = new RelationshipGraphAdapter();
-            RelationshipGraph friendGraph = graphAnalyzer.parse(script);
-            boolean result = friendGraph.hasConnection(name1, name2);
+            RelationshipGraph graph = graphAnalyzer.parse(script);
+            boolean result = graph.hasConnection(name1, name2);
             System.out.println("Are " + name1 + " and " + name2 + " connected? " + result);
         } catch (IOException e) {
             e.printStackTrace();
